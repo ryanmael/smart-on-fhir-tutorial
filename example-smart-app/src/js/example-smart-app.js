@@ -27,7 +27,7 @@
           type: 'Observation',
           query: {
             code: {
-              $or: ['http://loinc.org|72166-2', 'http://loinc.org|26464-8']
+              $or: ['http://loinc.org|26478-8', 'http://loinc.org|26464-8']
             }
           }
         });
@@ -41,6 +41,7 @@
           var byCodes = smart.byCodes(obv, 'code');
           console.log("byCodes:");
           console.log(byCodes('26478-8'));
+		  console.log(byCodes('26464-8'));
           console.log(byCodes('2345-7'));
 
           var gender = patient.gender;
