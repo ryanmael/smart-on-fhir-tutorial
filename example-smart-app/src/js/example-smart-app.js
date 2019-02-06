@@ -157,6 +157,7 @@
     $('#gender').html(p.gender);
     $('#birthdate').html(p.birthdate);
     $('#lymph').html(p.lymph);
+	$('#mammo').html(p.mammo);
     
     // Cerner SoF Tutorial Observations
 
