@@ -40,7 +40,7 @@
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           console.log("byCodes:");
-          console.log(byCodes('26478-8'));
+          console.log(byCodes('26464-8'));
           console.log(byCodes('2345-7'));
 
           var gender = patient.gender;
@@ -54,7 +54,7 @@
           }
 
           // Observations
-          lymph = byCodes('26478-8');
+          custom = byCodes('26464-8');
           // Cerner SoF Tutorial Observations
           // var height = byCodes('8302-2');
           // var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
@@ -70,7 +70,7 @@
           p.lname = lname;
 
           // Observations
-          p.lymph = getQuantityValueAndUnit(lymph[0]);
+          p.custom = getQuantityValueAndUnit(custom[0]);
 
 
           // Cerner SoF Tutorial Observations
@@ -106,7 +106,7 @@
       lname: {value: ''},
       gender: {value: ''},
       birthdate: {value: ''},
-      lymph: {value: ''}
+      custom: {value: ''}
 
       // Cerner SoF Tutorial Observations
       // height: {value: ''},
@@ -154,7 +154,7 @@
     $('#lname').html(p.lname);
     $('#gender').html(p.gender);
     $('#birthdate').html(p.birthdate);
-    $('#lymph').html(p.lymph);
+    $('#custom').html(p.custom);
     
     // Cerner SoF Tutorial Observations
 
